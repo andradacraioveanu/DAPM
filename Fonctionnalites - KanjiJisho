@@ -1,5 +1,5 @@
 Le premier écran de l'application contient un champ texte et deux boutons, <<Custom Search>> et <<Search>>. Dans le champ texte, l'utilisateur peut introduire 
-les mots recherchés seront introduits a l'aide d'un clavier en alphabet latin. Apres avoir introduit chaque syllabe, le symbole 
+les mots recherchés qui seront introduits a l'aide d'un clavier en alphabet latin. Apres avoir introduit chaque syllabe, le symbole 
 en hiragana correspondant va apparaitre dans le champ texte.
 
 Le premier bouton, celui de <<Custom Search>> va ouvrir un nouvel écran avec les éléments suivants: un champ texte avec le mot
