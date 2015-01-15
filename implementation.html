@@ -1,0 +1,142 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Dapm : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Dapm</title>
+  </head>
+
+<body>
+ <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/andradacraioveanu/DAPM">View on GitHub</a>
+
+          <h1 id="project_title">Dapm</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/andradacraioveanu/DAPM/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/andradacraioveanu/DAPM/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+<div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+      
+        <h1>
+<a id="kanjijisho" class="anchor" href="#kanjijisho" aria-hidden="true"><span class="octicon octicon-link"></span></a>KanjiJisho</h1>
+
+<h2>	Spécification de l’application </h2>
+<hr>
+<br>
+
+<p> L’application Kanji Jisho donne l’utilisateur la possibilité de chercher des symboles kanji soit par la méthode directe avec la caisse de recherche soit par la méthode à l’aide des critères de recherche variés.
+L’utilisateur peut insérer dans la caisse de recherche des mots anglais ou même des romaji (des symboles japonais écrits en suivant la prononciation avec les lettres de l’alphabet latin).
+</p>
+<p>
+ Les critères disponibles pour le deuxième type de recherche seront (apart le sens en anglais, les onyomi ou les kunyomi qu’il peut introduire dans la caisse de recherche) un panneau des radicaux (morceaux qui composent le kanji) d’où l’utilisateur peut choisir un ou plusieurs signes qui font partie du symbole recherché et le nombre de lignes utilisées dans son écriture.
+</p>
+<br>
+<p>
+L’application “Kanji Jisho” est une application de type dictionnaire japonais- anglais qui aide l’utilisateur à mieux apprendre à lire et écrire avec les symboles japonais, les kanji.
+Les kanji sont des caractères généralement empruntés au système d'écriture de l'ethnie chinoise Han. Ces caractères sont les éléments d'un des trois ensembles de caractères de l'écriture japonaise, avec les hiragana et les katakana, ces deux derniers étant regroupés sous le terme de kanas.
+</p>
+<br>
+
+<p>
+En fonction de la langue choisit par l’utilisateur, le mot peut être cherché soit en Japonaise soit en Anglais.
+La structure de la page des résultats nous permet de voir les sens du kanji cherché, le symbole de celui-ci et la prononciation. 
+</p>
+<br>
+<h2>2.2	Design de l’application</h2>
+<p>
+
+En ce qui concerne le design de l’application, pour la structurer, on a utilisé 5 écrans : un pour la première page, pour choisir le type de recherche, deux pour chaque type ( soit pour introduire en utilisant des lettres le symbole cherché pour un Search direct, soit pour choisir un Search customisé) et deux autres pour la visualisation des résultats.
+Faisant la corrélation avec le langage de programmation utilisée, Swift, comme design on a utilisé des views de type ViewController, TableView Controller, et des éléments comme ScrollView, Label, TextField, etc.
+</p>
+<p>
+En ce qui concerne le design de l’application, pour la structurer, on a utilisé 5 écrans : un pour la première page, pour choisir le type de recherche, deux pour chaque type ( soit pour introduire en utilisant des lettres le symbole cherché pour un Search direct, soit pour choisir un Search customisé) et deux autres pour la visualisation des résultats.
+Faisant la corrélation avec le langage de programmation utilisée, Swift, comme design on a utilisé des views de type ViewController, TableView Controller, et des éléments comme ScrollView, Label, TextField, etc.
+</p>
+<hr/>
+<p>
+En ce qui concerne le design de l’application, pour la structurer, on a utilisé 5 écrans : un pour la première page, pour choisir le type de recherche, deux pour chaque type ( soit pour introduire en utilisant des lettres le symbole cherché pour un Search direct, soit pour choisir un Search customisé) et deux autres pour la visualisation des résultats.
+Faisant la corrélation avec le langage de programmation utilisée, Swift, comme design on a utilisé des views de type ViewController, TableView Controller, et des éléments comme ScrollView, Label, TextField, etc.
+
+</p>
+<br>
+<p>
+En ce qui concerne le mode d’affichage des radicaux pour la recherche customisé des kanji, on a utilisé un ScrollView. La classe UIScrollView fournit un support pour l'affichage du contenu qui est supérieure à la taille de la fenêtre de l'application. Il permet aux utilisateurs de faire défiler sein de ce contenu en faisant des gestes de glissage, et pour zoomer à partir de portions du contenu en faisant des gestes de pincement. Pour notre application, le ScrollView a été initialisé avec la dimension correspondante aux nombres de radicaux stockés dans la mémoire.
+</p>
+<br>
+<p>
+Pour la contribution de l’utilisateur, on a utilisé des éléments UI comme des TextFields (UITextField) et des buttons (UIButton). 
+</p>
+<h2>L’architecture de l’application</h2>
+<p>
+En ce qui concerne l’architecture et la structure de l’application Kanji Jisho, on peut dire que celle-ci est une architecture MVC (Model – View - Controller) avec des rôles combinées. 
+Pour les applications Swift, les composantes ViewController mettent ensemble les éléments Controller et View de la forme originale de ce type de structure (MVC).
+
+</p>
+<br>
+<p>
+En ce qui concerne l’architecture et la structure de l’application Kanji Jisho, on peut dire que celle-ci est une architecture MVC (Model – View - Controller) avec des rôles combinées. 
+Pour les applications Swift, les composantes ViewController mettent ensemble les éléments Controller et View de la forme originale de ce type de structure (MVC).
+
+</p>
+<p>
+Pour le dictionnaire de kanji, les ViewControllers vont communiquer entre eux pour prendre l’input de l’utilisateur d’un écran et le passer comme paramètre dans l’écran des résultats (pour la recherche directe).
+</p>
+<br>
+<p>
+En ce qui concerne le stockage des données, les radicaux et les kanji sont stockés dans un fichier XML avec des éléments kanji
+L’alphabet des syllabes, hiragana, est aussi stocké dans un fichier XML, utilisé pour transformer l’input de l’utilisateur dans le TextField de l’ecran « Direct Search » pour la recherche avec des mots en japonais de romaji en hiragana.
+</p>
+<h2>Fonctionnalites</h2>
+<p>
+L’alphabet des syllabes, hiragana, est aussi stocké dans un fichier XML, utilisé pour transformer l’input de l’utilisateur dans le TextField de l’ecran « Direct Search » pour la recherche avec des mots en japonais de romaji en hiragana.
+</p>
+<p>
+Les boutons <<Search>> du premier et deuxième écran vont appeler une fonction qui va parcourir un fichier XML avec des kanji et leurs propriétés (comme nous avons montré avant) et va afficher en utilisant un tableView tous  les kanji qui remplissent toutes les conditions de la recherche. Pour la recherche directe, la méthode prendra l’input de l’utilisateur qui sera comparé avec les sous-éléments onyomi ou kunyomi ou des mots présents dans l’élément XML « translation ».
+En cliquant sur un des éléments de TableView, on verra un autre écran avec tous les sous-éléments (détailles) de l’élément kanji sélecté du fichier XML. 
+
+</p>
+<br>
+<h2> Structure du code </h2>
+<p>
+Le code est structuré en respectant un pattern adapté du Model-View-Controller : 
+</p>
+<ul>
+  <li>Premièrement, on a un directeur Controllers qui contient :
+    <ul>
+      <li> 	SearchViewController (pour le premier écran ou on choisit le type de recherche) </li>
+      <li>  ViewController (pour l’écran de la recherche directe) </li>
+      <li> 	CustomViewController (pour l’écran de la recherche customisé) </li>
+      <li> 	TableViewController (pour l’affichage des tous les kanji qui remplissent les conditions de recherche pour les deux types de recherche) </li>
+      <li> 	DetailViewController (pour l’écran avec les détails d’un des kanji retournés par la recherche) </li>
+    </ul>
+  </li>
+  <li> Un directeur SupportingFiles, pour les Ressources qui contient :
+    <ul>
+      <li> 	Les deux fichiers XML avec les kanji et avec l’alphabet des syllabes Hiragana </li>
+      <li>  Les images </li>
+      
+      
+    </ul>
+  </li>
+  <li> Les deux classes pour parser les fichiers XML</li>
+  <li> La classe principale, AppDelegate, crée automatiquement en XCode </li>
+</ul>
+<div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Dapm maintained by <a href="https://github.com/andradacraioveanu">andradacraioveanu</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+</body>
+</html>
